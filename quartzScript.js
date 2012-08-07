@@ -214,6 +214,16 @@
 		},
 		rc : function(name) {
 			return localStorage.removeItem(name);
+		},
+		say : function(q, color) {
+			if(color) {
+				$.echo(q, color);
+			} else {
+				$.echo(q);
+			}
+		},
+		visit : function(url) {
+			window.location = url;
 		}
 
 	};
