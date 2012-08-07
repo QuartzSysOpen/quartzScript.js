@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Example Application</title>
+</head>
+<body>
+	<p id="programOut">
+	</p>
+	<script src="quartzScript.js"></script>
+	<script>
+	$.start();
+	$.getIntIn(22, 'do you want to (1) read a cookie, or (2) set a cookies');
+	$.equals($.access(22), 1, function() {
+		$.print($.ac('cookie'));
+	});
+	$.equals($.access(22), 2, function() {
+		$.getIn(22, 'set cookie');
+		$.sc('cookie', $.access(22));
+	});
+	</script>
+</body>
+</html>
