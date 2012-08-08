@@ -224,6 +224,9 @@
 		},
 		visit : function(url) {
 			window.location = url;
+		},
+		cls : function() {
+			this.stdout.innerHTML = '';
 		}
 
 	};
